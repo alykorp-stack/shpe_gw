@@ -1,0 +1,8 @@
+---
+title: "Welcome to SHPE GW"
+---
+
+<!-- TODO: replace with the chapter's real welcome message -->
+Welcome to the Society of Hispanic Professional Engineers chapter at The George Washington University.
+
+{{< include chunks/_under-construction.qmd >}}

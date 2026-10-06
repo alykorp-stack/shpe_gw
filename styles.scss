@@ -1,0 +1,31 @@
+/*-- scss:defaults --*/
+
+// TODO: replace with official SHPE brand colors, then uncomment
+// $primary: #000000;
+// $secondary: #000000;
+
+$body-color: #000000;
+$navbar-fg: #000000;
+
+/*-- scss:rules --*/
+
+.navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+// Spacing and divider lines between navbar links (desktop only; the mobile menu stacks vertically)
+@include media-breakpoint-up(lg) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .navbar-nav .nav-item + .nav-item {
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}
+
+.navbar-logo {
+  max-height: 40px;
+}

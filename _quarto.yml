@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "SHPE GW"
+  navbar:
+    logo: images/shpegw_logo.png
+    logo-href: index.qmd
+    title: false
+    right:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About Us
+      - href: eboard.qmd
+        text: E-Board
+      - href: events.qmd
+        text: Events
+      - href: join.qmd
+        text: Join La Familia
+      - href: sponsors.qmd
+        text: Sponsors
+      - href: contact.qmd
+        text: Contact Us
+  page-footer:
+    center: "© 2026 SHPE at The George Washington University"
+
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    toc: false
