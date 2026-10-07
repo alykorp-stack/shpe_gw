@@ -1,5 +1,15 @@
 ---
-title: "Join La Familia"
+pagetitle: "Get Involved"
 ---
 
-{{< include chunks/_under-construction.qmd >}}
+::: {.section-heading}
+## Get Involved
+:::
+
+::: {.join-split .column-screen}
+::: {.join-half style="background-color:#001F5B;"}
+:::
+
+::: {.join-half style="background-color:#FD652F;"}
+:::
+:::
