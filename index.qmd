@@ -10,9 +10,49 @@ pagetitle: "SHPE GW"
 
 ::: {.after-hero .column-screen}
 ::: {.after-hero-inner}
-<!-- TODO: replace with the chapter's real welcome message -->
-Welcome to the Society of Hispanic Professional Engineers chapter at The George Washington University.
+::: {.about-heading}
+## About Us
+:::
 
-{{< include chunks/_under-construction.qmd >}}
+<!-- TODO: replace placeholder images and text in the cards below -->
+::: {.about-card}
+![](images/placeholder_index.png){fig-alt="Placeholder image"}
+
+::: {.about-card-text}
+### [SHPE]{style="color:#001F5B;"}
+
+Placeholder text about SHPE.
+:::
+:::
+
+::: {.about-card}
+![](images/placeholder_index.png){fig-alt="Placeholder image"}
+
+::: {.about-card-text}
+### [SHPE at GW]{style="color:#D6BF91;"}
+
+Placeholder text about SHPE at GW.
+:::
+:::
+
+::: {.about-card}
+![](images/placeholder_index.png){fig-alt="Placeholder image"}
+
+::: {.about-card-text}
+### [Our Mission]{style="color:#FD652F;"}
+
+Placeholder text for our mission.
+:::
+:::
+
+::: {.about-card}
+![](images/placeholder_index.png){fig-alt="Placeholder image"}
+
+::: {.about-card-text}
+### [Our Vision]{style="color:#FD652F;"}
+
+Placeholder text for our vision.
+:::
+:::
 :::
 :::

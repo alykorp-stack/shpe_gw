@@ -1,5 +1,10 @@
-# E-Board cards, shown in the order listed here.
-# Copy a block (from "- title" down) to add a person.
+#E board cards are listed here
+
+- title: "Member Name"
+  subtitle: "Position"
+  image: images/members/placeholder_index.png
+  description: "A sentence or two about this person."
+
 - title: "Member Name"
   subtitle: "Position"
   image: images/members/placeholder_index.png
@@ -14,3 +19,4 @@
   subtitle: "Position"
   image: images/members/placeholder_index.png
   description: "A sentence or two about this person."
+

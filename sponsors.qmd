@@ -1,5 +1,27 @@
 ---
-title: "Sponsors"
+pagetitle: "Sponsors"
 ---
 
+::: {.hero .hero-half .column-screen}
+
+![](images/placeholder_index.png){.hero-bg fig-alt="Placeholder image"}
+<!-- TODO: replace placeholder subtitle -->
+[Partner With Us]{.hero-title}
+[Placeholder text about partnering with SHPE GW.]{.hero-subtitle}
+:::
+
+::: {.after-hero .column-screen}
+::: {.after-hero-inner}
+::: {.section-heading}
+## Our Sponsors
+:::
+
 {{< include chunks/_under-construction.qmd >}}
+
+::: {.section-heading}
+## Become a Sponsor
+:::
+
+{{< include chunks/_under-construction.qmd >}}
+:::
+:::

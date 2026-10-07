@@ -65,6 +65,21 @@ $navbar-fg: #000000;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
+// Sponsors hero: same pinned behavior, half the screen tall
+.hero.hero-half {
+  height: 50vh;
+}
+
+.hero-subtitle {
+  display: block;
+  max-width: 800px;
+  margin: 1rem auto 0;
+  padding: 0 1rem;
+  font-size: 1.25rem;
+  text-align: center;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
 .after-hero {
   position: relative;
   z-index: 1;
@@ -80,11 +95,72 @@ $navbar-fg: #000000;
 }
 
 .after-hero-inner {
-  max-width: 800px;
+  max-width: 90%; 
   margin: 0 auto;
 }
 
-#listing-eboard .card{
+// Home "About Us" section: image on the left, text on the right; stacks on small screens
+.about-heading h2,
+.section-heading h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: none;
+}
+
+.about-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+
+  // Quarto wraps the image in a <p>, so size the wrapper
+  > p:first-child {
+    flex: 0 0 40%;
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .about-card-text {
+    flex: 1;
+
+    h3 {
+      font-size: 3rem; // 3x body text
+      font-weight: 700;
+      line-height: 1.1;
+      margin-top: 0;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    align-items: stretch;
+
+    > p:first-child {
+      flex: none;
+    }
+  }
+}
+
+#listing-eboard .card {
   border-radius: 16px;
   overflow: hidden;
+
+  .card-img-top {
+    width: 100%;
+    aspect-ratio: 1 / 5;        
+    height: 250px;
+    object-fit: cover;
+    object-position: center top;
+  }
 }

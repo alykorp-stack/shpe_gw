@@ -11,7 +11,7 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - href: about.qmd
+      - href: index.qmd#about-us
         text: About Us
       - href: eboard.qmd
         text: E-Board
@@ -30,3 +30,4 @@ format:
   html:
     theme: [cosmo, styles.scss]
     toc: false
+    anchor-sections: false # no link icons next to headings
