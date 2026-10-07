@@ -1,5 +1,19 @@
 ---
 title: "E-Board"
+listing:
+  id: eboard
+  contents: eboard.yml
+  sort: false
+  type: grid
+  sort-ui: false
+  filter-ui: false
+  fields: [image, title, subtitle, description]
+  image-height: auto
+page-layout: full
 ---
+
+
+
+
 
 {{< include chunks/_under-construction.qmd >}}
