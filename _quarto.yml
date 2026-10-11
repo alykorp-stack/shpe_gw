@@ -19,8 +19,6 @@ website:
         text: Events
       - href: join.qmd
         text: Get Involved
-      - href: sponsors.qmd
-        text: Sponsors
       - href: contact.qmd
         text: Contact Us
   page-footer:

@@ -12,8 +12,3 @@ listing:
 page-layout: full
 ---
 
-
-
-
-
-{{< include chunks/_under-construction.qmd >}}

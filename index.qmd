@@ -41,7 +41,8 @@ Placeholder text about SHPE at GW.
 ::: {.about-card-text}
 ### [Our Mission]{style="color:#FD652F;"}
 
-Placeholder text for our mission.
+SHPE changes lives by empowering the Hispanic community to drive social and economic growth by excelling in STEM.
+
 :::
 :::
 
@@ -51,8 +52,20 @@ Placeholder text for our mission.
 ::: {.about-card-text}
 ### [Our Vision]{style="color:#FD652F;"}
 
-Placeholder text for our vision.
+SHPE’s vision is a world where Hispanics are highly valued and influential as the leading innovators, scientists, mathematicians, and engineers.
+
+
 :::
 :::
+
 :::
+
+::: {.join-links-social}
+[<i class="bi bi-instagram"></i> Instagram](https://www.instagram.com/shpe_gwu){.btn .join-btn}
+
+[<i class="bi bi-linkedin"></i> LinkedIn](https://www.linkedin.com/company/shpegwu){.btn .join-btn}
+
+[<i class="bi bi-link-45deg"></i> Linktree](https://linktr.ee/shpegwu){.btn .join-btn}
+:::
+
 :::
