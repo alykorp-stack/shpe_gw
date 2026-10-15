@@ -1,0 +1,18 @@
+# One block per event. Fill in each field; delete the "image" line if there is no picture.
+# date format: YYYY-MM-DD. Newest events show first.
+
+- title: "Event Name"
+  date: 2026-11-05
+  location: "Location of the event"
+  description: "A sentence or two about what the event is and who it is for."
+  image: images/hhm.jpg
+
+- title: "Event Name"
+  date: 2026-10-20
+  location: "Location of the event"
+  description: "A sentence or two about what the event is and who it is for."
+
+- title: "Event Name"
+  date: 2026-10-02
+  location: "Location of the event"
+  description: "A sentence or two about what the event is and who it is for."

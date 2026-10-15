@@ -1,5 +1,45 @@
 ---
-title: "Events"
+pagetitle: "Events"
+listing:
+  id: events
+  contents: events.yml
+  type: default
+  sort: "date desc"
+  sort-ui: false
+  filter-ui: false
+  fields: [image, date, title, location, description]
+  image-align: left
+  date-format: long
+page-layout: full
 ---
 
-{{< include chunks/_under-construction.qmd >}}
+::: {.section-heading .heading-band .column-screen style="background-color:#00223E; padding-top:2rem; padding-bottom:2rem;"}
+## [Events]{style="color:#D6BF91;"}
+:::
+
+::: {#events}
+:::
+
+```{=html}
+<script>
+// Click an event picture to see it full size; click anywhere or press Esc to close.
+document.addEventListener("click", function (e) {
+  var img = e.target.closest("#listing-events .thumbnail img");
+  if (!img) return;
+  e.preventDefault();
+  var box = document.createElement("div");
+  box.className = "event-lightbox";
+  box.innerHTML = '<img alt="">';
+  box.firstChild.src = img.currentSrc || img.src;
+  box.firstChild.alt = img.alt;
+  function close() {
+    box.remove();
+    document.removeEventListener("keydown", onKey);
+  }
+  function onKey(ev) { if (ev.key === "Escape") close(); }
+  box.addEventListener("click", close);
+  document.addEventListener("keydown", onKey);
+  document.body.appendChild(box);
+});
+</script>
+```

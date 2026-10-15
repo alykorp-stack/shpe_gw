@@ -1,5 +1,5 @@
 ---
-title: "E-Board"
+title: ""
 listing:
   id: eboard
   contents: eboard.yml
@@ -9,6 +9,16 @@ listing:
   filter-ui: false
   fields: [image, title, subtitle, description]
   image-height: auto
+  max-description-length: 1000
 page-layout: full
 ---
 
+::: {.section-heading .heading-band .column-screen style="background-color:#00223E; padding-top:2rem; padding-bottom:2rem; margin-bottom:2rem;"}
+## [2026-2027 E-BOARD]{style="color:#FFFFFF;"}
+:::
+
+::: {.column-screen-inset style="text-align:center; max-width:800px; margin:0 auto;"}
+
+*Meet the student leaders representing the diversity and drive of SHPE GW’s familia, advancing our mission through leadership, professional growth, and community.*
+
+:::

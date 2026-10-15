@@ -53,6 +53,16 @@ $navbar-fg: #000000;
   }
 }
 
+// Pages that open with a section heading band (e.g. E-Board): same flush-under-navbar treatment
+#quarto-content > main.content:has(> .section-heading, > .page-hero) {
+  margin-top: 0;
+  padding-top: 0;
+
+  > #title-block-header {
+    display: none;
+  }
+}
+
 .hero .hero-bg {
   position: absolute;
   inset: 0;
@@ -118,6 +128,12 @@ $navbar-fg: #000000;
   border-bottom: none;
 }
 
+// Bands that use their own padding for spacing: drop the h2 margins so the text sits centered
+.heading-band h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .about-card {
   display: flex;
   align-items: center;
@@ -161,37 +177,6 @@ $navbar-fg: #000000;
   }
 }
 
-// Join page: two equal color blocks side by side; stacks on small screens
-.join-split {
-  display: flex;
-  min-height: 70vh;
-
-  .join-half {
-    flex: 1;
-    padding: 3rem 2rem;
-    color: #fff;
-
-    h3 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-top: 0;
-    }
-
-    h4 {
-      color: #fff;
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-    }
-  }
-
-  @include media-breakpoint-down(md) {
-    flex-direction: column;
-
-    .join-half {
-      min-height: 50vh;
-    }
-  }
-}
 
 .join-btn {
   background-color: #D6BF91;
@@ -206,42 +191,565 @@ $navbar-fg: #000000;
   }
 }
 
-// Join page bottom: full-width band with stacked link buttons, then social buttons in a row
-.join-links {
-  background-color: #033C5A;
-  padding: 3rem 2rem;
+// Get Involved hero subtitle in tan (the Contact page keeps the pale blue one)
+.page-hero.join-hero .page-subtitle {
+  color: #D6BF91;
+}
+
+// Events page background
+body:has(#listing-events) {
+  background-color: #FFFFFF;
+}
+
+// Events page: horizontal cards (optional photo, then title and description, then date and location)
+#listing-events {
+  grid-column: screen-start-inset / screen-end-inset; // same full-width trick as the E-Board listing
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 2rem 4rem;
+
+  // Quarto wraps every card in an empty link; these cards are info only
+  a.no-external {
+    color: inherit;
+    cursor: default;
+    pointer-events: none;
+    text-decoration: none;
+  }
+
+  .quarto-post {
+    display: flex;
+    gap: 0; // Quarto adds a gap between the photo and the text
+    align-items: stretch;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+    color: #001F5B;
+
+    // No picture: drop the empty photo column so the text starts at the card edge
+    .thumbnail:not(:has(img)) {
+      display: none;
+    }
+
+    // Fliers are usually portrait, so show the whole picture instead of cropping it; clicking opens it larger
+    .thumbnail {
+      flex: 0 0 240px;
+      margin: 0;
+      background-color: #f4f6f8;
+
+      a,
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      img {
+        max-height: 340px;
+        object-fit: contain;
+        cursor: zoom-in;
+        pointer-events: auto; // the wrapping link is disabled above; the image still needs clicks
+      }
+    }
+
+    .body {
+      flex: 1;
+      margin: 0;
+      padding: 1.5rem 2rem;
+
+      .listing-title,
+      .listing-title a {
+        margin: 0 0 0.75rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+
+      .listing-description,
+      .listing-description p {
+        margin: 0;
+        font-size: 1rem;
+      }
+    }
+
+    // Date and location column on a yellow "ticket stub", each with a small navy label above the value
+    .metadata {
+      flex: 0 0 220px;
+      padding: 1.5rem;
+      background-color: #FFF2BD;
+
+      .listing-date,
+      .listing-location {
+        margin: 0 0 1rem;
+        font-size: 1rem;
+        font-weight: 700;
+
+        &::before {
+          display: block;
+          margin-bottom: 0.15rem;
+          color: #001F5B;
+          font-size: 0.75rem;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
+      }
+
+      .listing-date::before {
+        content: "Date";
+      }
+
+      .listing-location::before {
+        content: "Location";
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 1rem;
+
+    .quarto-post {
+      flex-direction: column;
+
+      .thumbnail {
+        flex: none;
+        order: -1; // photo on top when the card stacks
+
+        img {
+          height: auto;
+          max-height: 320px;
+        }
+      }
+
+      .metadata {
+        flex: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+      }
+    }
+  }
+}
+
+// Full-size view of an event picture (opened by the script in events.qmd)
+.event-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  cursor: zoom-out;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  }
+}
+
+// Get Involved hero: title and subtitle on the left, photo on the right
+.join-hero .page-hero-inner {
+  display: flex;
+  flex-direction: row-reverse; // the <img> comes first in the markup, so this flips it to the right
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.join-hero-text {
+  flex: 1; // text takes the remaining width so the photo sits against the right edge
+}
+
+.join-hero-img {
+  flex: none;
+  width: 340px;
+  height: 230px;
+  border-radius: 9px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+
+@include media-breakpoint-down(md) {
+  .join-hero .page-hero-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .join-hero-img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+// Get Involved page: two membership cards overlapping the hero, then a soft gray "stay connected" band
+.join-cards-inner {
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: -5rem auto 0; // pulls the cards up over the hero band
+  padding: 0 2rem 4rem;
+}
+
+.join-card {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  color: #001F5B;
+
+  h3 {
+    margin-top: 0;
+    font-size: 2.25rem;
+    font-weight: 700;
+  }
+
+  h4 {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  .join-btn {
+    background-color: #FD652F;
+    color: #001F5B;
+
+    &:hover {
+      background-color: #001F5B;
+      color: #fff;
+    }
+  }
+
+  // Small label above the card title (Quarto wraps it in a <p>, so the spacing lives on the <p>)
+  > p:first-child {
+    margin-bottom: 0.75rem;
+  }
+
+  .join-eyebrow {
+    display: block;
+    color: #FD652F;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+}
+
+.join-card-navy {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  background-color: #001F5B;
+  color: #fff;
 
-  // Quarto wraps each button in a <p>; drop its margin so the gap controls spacing
+  // Quarto nests the ### and #### headings in <section>s; make them fill the card and pin the button to the bottom
+  section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    > p:last-child {
+      margin-top: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  h3 {
+    color: #fff;
+  }
+
+  h4 {
+    color: #D6BF91;
+  }
+
+  // Same rectangle label as the National card, in tan with navy text
+  .join-eyebrow {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    background-color: #D6BF91;
+    border-radius: 4px;
+    color: #001F5B;
+  }
+
+  .join-btn:hover {
+    background-color: #fff;
+    color: #001F5B;
+  }
+}
+
+// National card: bright blue with white text (the fee callout keeps its own light background and navy text)
+.join-card-blue {
+  background-color: #72A9BE;
+  color: #fff;
+
+  h3 {
+    color: #fff;
+  }
+
+  // Orange rectangle with navy text: orange text alone is too faint on this blue
+  .join-eyebrow {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    background-color: #FD652F;
+    border-radius: 4px;
+    color: #001F5B;
+  }
+
+  .join-btn:hover {
+    background-color: #fff;
+    color: #001F5B;
+  }
+
+  .join-fee {
+    color: #001F5B;
+  }
+}
+
+// Optional image at the top of a card: ![](images/photo.jpg){.join-card-img}
+.join-card-img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+// $10 fee callout inside the National card
+.join-fee {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  background-color: #eaf3f7;
+  border-left: 4px solid #FD652F;
+  border-radius: 12px;
+
+  p:first-child {
+    margin-bottom: 0.75rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.join-connect {
+  padding: 4rem 2rem;
+  background-color: #f4f6f8;
+}
+
+.join-connect-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+
   p {
     margin: 0;
   }
 
-  .join-links-text {
-    display: block;
-    text-align: center;
+  .join-btn {
+    background-color: #001F5B;
     color: #D6BF91;
-    font-size: 1.75rem;
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: 0.02em;
-  }
 
-  .join-links-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    max-width: 400px;
-
-    .join-btn {
-      width: 100%;
+    &:hover {
+      background-color: #FD652F;
+      color: #001F5B;
     }
   }
+}
 
+.join-connect-title {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #001F5B;
+  font-size: 2.5rem;
+  font-weight: 700;
+
+  // Short orange accent bar under the title
+  &::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 4px;
+    margin: 0.75rem auto 0;
+    background-color: #FD652F;
+    border-radius: 2px;
+  }
+}
+
+.join-connect-sub {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: #001F5B;
+  font-size: 1.25rem;
+}
+
+.join-connect-sub-gap {
+  margin-top: 3rem;
+}
+
+// GroupMe links as a row of rounded tiles
+.groupme-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+
+  .groupme-tile {
+    display: block;
+    padding: 1.25rem 1rem;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    color: #001F5B;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+    i {
+      margin-right: 0.4rem;
+      color: #FD652F;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .join-cards-inner {
+    flex-direction: column;
+    padding: 0 1rem 3rem;
+  }
+
+  .join-card {
+    padding: 1.5rem;
+  }
+
+  .groupme-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Page hero (Contact, Get Involved): navy band whose bottom padding is overlapped by the content below it
+// Contact page: a white card overlaps the band, with a photo cluster beside it
+.page-hero {
+  background-color: #00223E;
+  padding: 3rem 0 7rem; // extra bottom padding is the part the card overlaps
+
+  .page-hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .page-title {
+    display: block;
+    color: #fff;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .page-subtitle {
+    display: block;
+    margin-top: 1rem;
+    color: #72A9BE;
+    font-size: 1.25rem;
+  }
+}
+
+.contact-body-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: -5rem auto 3rem; // pulls the card and photos up over the header band
+  padding: 0 2rem;
+}
+
+.contact-card {
+  position: relative;
+  z-index: 1;
+  flex: 0 1 60%;
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  color: #001F5B;
+
+  h3 {
+    margin-top: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+
+  }
+
+  // Quarto wraps each ### heading in a <section>; divide the second one ("Email Us") from the first
+  section + section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e9ecef;
+  }
+
+  .join-btn {
+    background-color: #FD652F;
+    color: #001F5B;
+
+    &:hover {
+      background-color: #001F5B;
+      color: #fff;
+    }
+  }
+}
+
+// Photo cluster: overlapping rounded squares in a zig zag (placeholders: images/contact-1..4.jpg)
+.contact-cluster {
+  position: relative;
+  flex: 1;
+  height: 510px;
+  min-width: 340px;
+
+  .contact-photo {
+    position: absolute;
+    object-fit: cover;
+  }
+
+  // Four rounded squares in a zig zag: left, right, left, right, each overlapping the one above
+  .contact-photo {
+    width: 240px;
+    height: 160px;
+    border-radius: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .contact-photo-1 { top: 0;     left: 20px; }
+  .contact-photo-2 { top: 120px; left: 170px; }
+  .contact-photo-3 { top: 240px; left: 20px; }
+  .contact-photo-4 { top: 360px; left: 170px; }
+}
+
+// Small screens: card on top at full width, drop the photo cluster
+@include media-breakpoint-down(md) {
+  .contact-body-inner {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .contact-card {
+    flex: none;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .contact-cluster {
+    display: none;
+  }
 }
 
 // Social buttons in a centered row; used on the join and home pages
@@ -256,15 +764,60 @@ $navbar-fg: #000000;
   }
 }
 
+// E-Board page: light blue behind the cards (the heading band keeps its own color)
+body:has(#listing-eboard) {
+  background-color: #C5DCCF;
+}
+
+// Quarto's full page layout leaves the right margin column empty, which pulls the listing left.
+// Span the whole screen (same lines as .column-screen-inset) so the cards center on the page.
+#listing-eboard {
+  grid-column: screen-start-inset / screen-end-inset;
+  padding: 0 3rem;
+}
+
+// Center each row of cards, including a short last row (a CSS grid would left-align it)
+#listing-eboard .list.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+
+  > div {
+    flex: 0 1 calc((100% - 3rem) / 3); // three per row (two 1.5rem gaps)
+
+    @include media-breakpoint-down(md) {
+      flex-basis: 100%;
+    }
+  }
+}
+
 #listing-eboard .card {
   border-radius: 16px;
   overflow: hidden;
 
   .card-img-top {
     width: 100%;
-    aspect-ratio: 1 / 5;        
-    height: 250px;
+    height: 280px;
+    flex: 0 0 280px; // keep the photo box from shrinking inside the flex column card
     object-fit: cover;
     object-position: center top;
+    margin: 0;
+    overflow: hidden;
+
+    // Quarto puts the photo in an <img style="height:auto"> inside this box; make it fill and crop
+    img {
+      display: block;
+      width: 100%;
+      height: 100% !important;
+      object-fit: cover;
+      object-position: center 30%;
+    }
   }
+}
+// E-Board card bio bullets: left-aligned list inside the centered card
+#listing-eboard .listing-description ul {
+  text-align: left;
+  padding-left: 1.2rem;
+  margin: 0;
 }

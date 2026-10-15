@@ -14,9 +14,9 @@ pagetitle: "SHPE GW"
 ## About Us
 :::
 
-<!-- TODO: replace placeholder images and text in the cards below -->
+
 ::: {.about-card}
-![](images/placeholder_index.png){fig-alt="Placeholder image"}
+![](images/familia_img.jpg){fig-alt="convention 2025"}
 
 ::: {.about-card-text}
 ### [SHPE]{style="color:#001F5B;"}
@@ -36,7 +36,7 @@ Placeholder text about SHPE at GW.
 :::
 
 ::: {.about-card}
-![](images/placeholder_index.png){fig-alt="Placeholder image"}
+![](images/hhm.jpg){fig-alt="Meet La Familia"}
 
 ::: {.about-card-text}
 ### [Our Mission]{style="color:#FD652F;"}
@@ -47,7 +47,7 @@ SHPE changes lives by empowering the Hispanic community to drive social and econ
 :::
 
 ::: {.about-card}
-![](images/placeholder_index.png){fig-alt="Placeholder image"}
+![](images/dmvmixer.jpeg){fig-alt="DMV SHPE Mixer"}
 
 ::: {.about-card-text}
 ### [Our Vision]{style="color:#FD652F;"}

@@ -1,5 +1,40 @@
 ---
-title: "Contact Us"
+pagetitle: "Contact Us"
 ---
 
-{{< include chunks/_under-construction.qmd >}}
+::: {.page-hero .column-screen}
+::: {.page-hero-inner}
+[Contact us]{.page-title}
+
+[Questions, comments, suggestions: we're here for all of it.]{.page-subtitle}
+:::
+:::
+
+::: {.contact-body .column-screen}
+::: {.contact-body-inner}
+
+::: {.contact-card}
+### Suggestion Box
+
+Questions, comments, suggestions, or concerns? Head to our suggestion box and we'll make sure all of your questions get answered.
+
+[Open the Suggestion Box](https://docs.google.com/forms/d/e/1FAIpQLScezo97qIL4w_Wj6eDyPDBWRluiV8zvTa6EaoFuZvsjt09w8g/viewform){.btn .join-btn target="_blank"}
+
+### Email Us
+
+Prefer to reach us directly? Send us a message at our email and we'll get back to you as soon as we can.
+
+[shpe@email.gwu.edu](mailto:shpe@email.gwu.edu){.btn .join-btn}
+:::
+
+```{=html}
+<div class="contact-cluster" aria-hidden="true">
+  <img class="contact-photo contact-photo-1" src="images/sgbm.jpg" alt="">
+  <img class="contact-photo contact-photo-2" src="images/gala.jpg" alt="">
+  <img class="contact-photo contact-photo-3" src="images/sipnpaint.jpg" alt="">
+  <img class="contact-photo contact-photo-4" src="images/bridge.jpg" alt="">
+</div>
+```
+
+:::
+:::

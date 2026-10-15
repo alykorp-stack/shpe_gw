@@ -2,38 +2,64 @@
 pagetitle: "Get Involved"
 ---
 
-::: {.section-heading .column-screen style="background-color:#DAC8A3; padding-top:2rem;"}
-## [Get Involved]{style="color:#033C5A;"}
+::: {.page-hero .join-hero .column-screen}
+::: {.page-hero-inner}
+```{=html}
+<img class="join-hero-img" src="images/gbm_1.jpg" alt="SHPE GW members holding flags at a tabling event">
+```
+
+::: {.join-hero-text}
+[Get Involved]{.page-title}
+
+[Join the familia: become a member, stay in the loop, and find your place at SHPE GW.]{.page-subtitle}
+:::
+:::
 :::
 
-::: {.join-split .column-screen}
-::: {.join-half style="background-color:#00223E;"}
+::: {.join-cards .column-screen}
+::: {.join-cards-inner}
+
+::: {.join-card .join-card-navy}
+[Local chapter]{.join-eyebrow}
+
+### Join SHPE GW
+
+#### Become a part of our Familia
+
 <!-- TODO: replace placeholder text -->
-### [Join SHPE GW]{style="color:#D6BF91;"}
-
-#### [Become a part of our Familia]{style="color:#F6F1E8"}
-
 Placeholder text about becoming a member of SHPE GW: what members get, who can join, and how to get started.
 
 <!-- TODO: replace # with the real sign-up link -->
 [Join Now Through RevConnect](https://revconnect.gwu.edu/feeds?type=club&type_id=35790&tab=about){.btn .join-btn}
 :::
 
-::: {.join-half style="background-color:#FD652F;"}
-### [Join SHPE National]{style="color:#00000;"}
+::: {.join-card .join-card-blue}
+[National organization]{.join-eyebrow}
+
+### Join SHPE National
+
+Choosing to become a SHPE member means becoming part of a greater mission, supporting and uplifting a community, honoring the promises made before us, and helping turn dreams into reality.
+
+We are familia. SHPE is a welcoming and inclusive community where everyone is valued and accepted. It’s a place where you never have to question whether you belong, because you are already part of something special. No matter where you come from, there is a place for you here. Welcome home.
 
 [Become a Member](https://shpe.org/membership/become-a-member/){.btn .join-btn target="_blank"}
 
-Choosing to become a SHPE member means more than strengthening your academic skills or building your professional future. It means becoming part of a greater mission, supporting and uplifting a community, honoring the promises made before us, and helping turn dreams into reality.
+::: {.join-fee}
+**Want GW SHPE to cover the $10 fee?** Fill out this form!
 
-We are familia. SHPE is a welcoming and inclusive community where everyone is valued and accepted. It’s a place where you never have to question whether you belong, because you are already part of something special. No matter where you come from, there is a place for you here. Welcome home.
+[National Membership Form 2026](https://docs.google.com/forms/d/e/1FAIpQLSckAei5FBML97cE2G9gzk8RlMOYht1-8eJTejXsX4EHvmTeVw/viewform){.btn .join-btn target="_blank"}
 :::
 :::
 
-::: {.join-links .column-screen}
+:::
+:::
 
+::: {.join-connect .column-screen}
+::: {.join-connect-inner}
 
-[Follow us on our social medias to never miss a thing!]{.join-links-text}
+[Stay connected]{.join-connect-title}
+
+[Follow us on our social medias to never miss a thing!]{.join-connect-sub}
 
 ::: {.join-links-social}
 [<i class="bi bi-instagram"></i> Instagram](https://www.instagram.com/shpe_gwu){.btn .join-btn}
@@ -43,15 +69,15 @@ We are familia. SHPE is a welcoming and inclusive community where everyone is va
 [<i class="bi bi-link-45deg"></i> Linktree](https://linktr.ee/shpegwu){.btn .join-btn}
 :::
 
-::: {.join-links-stack}
+[Join our GroupMe's to stay connected!]{.join-connect-sub .join-connect-sub-gap}
 
-[Join our GroupMe's to stay connected!]{.join-links-text}
+::: {.groupme-grid}
+[<i class="bi bi-chat-dots-fill"></i> SHPE GW General Chat](https://web.groupme.com/join_group/111377823/SDXwNICD){.groupme-tile target="_blank"}
 
-[SHPE GW General Chat](https://web.groupme.com/join_group/111377823/SDXwNICD){.btn .join-btn}
+[<i class="bi bi-chat-dots-fill"></i> SHPE GW Freshman Class Chat](https://web.groupme.com/join_group/111163359/2ZmivTLE){.groupme-tile target="_blank"}
 
-[SHPE GW Freshman Class Chat](https://web.groupme.com/join_group/111163359/2ZmivTLE){.btn .join-btn}
-
-[SHPE GW Sophomore Class Chat](https://web.groupme.com/join_group/111163294/kexYHURX){.btn .join-btn}
+[<i class="bi bi-chat-dots-fill"></i> SHPE GW Sophomore Class Chat](https://web.groupme.com/join_group/111163294/kexYHURX){.groupme-tile target="_blank"}
 :::
 
+:::
 :::
