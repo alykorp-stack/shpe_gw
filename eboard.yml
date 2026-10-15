@@ -5,8 +5,6 @@
   image: images/members/placeholder_index.png
   description: "<ul><li>Major: Computer Engineering</li><li>Hometown: Lawrence, NJ</li><li>From: Guatemala</li><li>Fun fact: I love exploring DC on Capital Bikeshare</li></ul>"
 
-
-
 - title: "Aryanna Aneiros"
   subtitle: "External Vice President"
   image: images/members/placeholder_index.png
@@ -70,7 +68,7 @@
 - title: "Karen Sales-Fuentes"
   subtitle: "Events Committee"
   image: images/members/Karen.jpeg
-  description: "<ul><li>Major: Electrical Engineering</li><li>Hometown: Springfield, VA</li><li>From: Guatemala</li><li>Fun fact: I go camping over 3 times a year!</li></ul>"
+  description: "<ul><li>Major: Electrical Engineering</li><li>Hometown: Arlington, VA</li><li>From: Guatemala</li><li>Fun fact: I go camping over 3 times a year!</li></ul>"
 
 - title: "Alyssa Korponai"
   subtitle: "Class of 2029 Rep"
