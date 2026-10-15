@@ -773,7 +773,11 @@ body:has(#listing-eboard) {
 // Span the whole screen (same lines as .column-screen-inset) so the cards center on the page.
 #listing-eboard {
   grid-column: screen-start-inset / screen-end-inset;
-  padding: 0 3rem;
+  padding: 0 6rem;
+
+  @include media-breakpoint-down(lg) {
+    padding: 0 3rem;
+  }
 }
 
 // Center each row of cards, including a short last row (a CSS grid would left-align it)
@@ -784,7 +788,11 @@ body:has(#listing-eboard) {
   gap: 1.5rem;
 
   > div {
-    flex: 0 1 calc((100% - 3rem) / 3); // three per row (two 1.5rem gaps)
+    flex: 0 1 calc((100% - 4.5rem) / 4); // four per row (three 1.5rem gaps)
+
+    @include media-breakpoint-down(lg) {
+      flex-basis: calc((100% - 1.5rem) / 2); // two per row on tablets
+    }
 
     @include media-breakpoint-down(md) {
       flex-basis: 100%;
