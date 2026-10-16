@@ -84,6 +84,14 @@ $navbar-fg: #000000;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
+// Dark navy highlight behind the home hero text, hugging each line
+.hero-highlight {
+  padding: 0.1em 0.35em;
+  background-color: rgba(0, 31, 91, 0.92);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
 // Sponsors hero: same pinned behavior, half the screen tall
 .hero.hero-half {
   height: 50vh;
@@ -543,9 +551,35 @@ body:has(#listing-events) {
 }
 
 .join-connect-inner {
-  max-width: 1100px;
+  max-width: 1900px;
   margin: 0 auto;
   text-align: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 700px) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+
+  .join-connect-photo { grid-row: 1; }
+  .join-connect-photo-left { grid-column: 1; }
+  .join-connect-photo-right { grid-column: 3; }
+  .join-connect-body { grid-column: 2; grid-row: 1; }
+
+  .join-connect-photo img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 31, 91, 0.18);
+  }
+
+  @media (max-width: 1100px) {
+    grid-template-columns: 1fr 1fr;
+
+    .join-connect-body { grid-column: 1 / -1; grid-row: 2; }
+    .join-connect-photo { grid-row: 1; }
+    .join-connect-photo-left { grid-column: 1; }
+    .join-connect-photo-right { grid-column: 2; }
+  }
 
   p {
     margin: 0;
@@ -712,8 +746,8 @@ body:has(#listing-events) {
 .contact-cluster {
   position: relative;
   flex: 1;
-  height: 510px;
-  min-width: 340px;
+  height: 620px;
+  min-width: 400px;
 
   .contact-photo {
     position: absolute;
@@ -722,16 +756,16 @@ body:has(#listing-events) {
 
   // Four rounded squares in a zig zag: left, right, left, right, each overlapping the one above
   .contact-photo {
-    width: 240px;
-    height: 160px;
+    width: 232px;
+    height: 155px;
     border-radius: 24px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   }
 
   .contact-photo-1 { top: 0;     left: 20px; }
-  .contact-photo-2 { top: 120px; left: 170px; }
-  .contact-photo-3 { top: 240px; left: 20px; }
-  .contact-photo-4 { top: 360px; left: 170px; }
+  .contact-photo-2 { top: 155px; left: 150px; }
+  .contact-photo-3 { top: 310px; left: 20px; }
+  .contact-photo-4 { top: 465px; left: 150px; }
 }
 
 // Small screens: card on top at full width, drop the photo cluster

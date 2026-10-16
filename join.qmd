@@ -5,7 +5,7 @@ pagetitle: "Get Involved"
 ::: {.page-hero .join-hero .column-screen}
 ::: {.page-hero-inner}
 ```{=html}
-<img class="join-hero-img" src="images/gbm_1.jpg" alt="SHPE GW members holding flags at a tabling event">
+<img class="join-hero-img" src="images/general/gbm_1.jpg" alt="SHPE GW members holding flags at a tabling event">
 ```
 
 ::: {.join-hero-text}
@@ -57,6 +57,16 @@ We are familia. SHPE is a welcoming and inclusive community where everyone is va
 ::: {.join-connect .column-screen}
 ::: {.join-connect-inner}
 
+::: {.join-connect-photo .join-connect-photo-left}
+<img src="images/general/gala.JPG" alt="SHPE GW members at the gala">
+:::
+
+::: {.join-connect-photo .join-connect-photo-right}
+<img src="images/general/bridge02.jpg" alt="SHPE GW members on the bridge">
+:::
+
+::: {.join-connect-body}
+
 [Stay connected]{.join-connect-title}
 
 [Follow us on our social medias to never miss a thing!]{.join-connect-sub}
@@ -79,5 +89,6 @@ We are familia. SHPE is a welcoming and inclusive community where everyone is va
 [<i class="bi bi-chat-dots-fill"></i> SHPE GW Sophomore Class Chat](https://web.groupme.com/join_group/111163294/kexYHURX){.groupme-tile target="_blank"}
 :::
 
+:::
 :::
 :::

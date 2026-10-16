@@ -5,7 +5,7 @@ pagetitle: "SHPE GW"
 ::: {.hero .column-screen}
 
 ![](images/placeholder_index.png){.hero-bg fig-alt="SHPE GW members"}
-[Welcome to the [Society of Hispanic Professional Engineers]{style="color:#72A9BE;"} at the [George Washington University]{style="color:#D6BF91;"}]{.hero-title}
+[[Welcome to the [Society of Hispanic Professional Engineers]{style="color:#72A9BE;"} at the [George Washington University]{style="color:#D6BF91;"}]{.hero-highlight}]{.hero-title}
 :::
 
 ::: {.after-hero .column-screen}
@@ -16,27 +16,29 @@ pagetitle: "SHPE GW"
 
 
 ::: {.about-card}
-![](images/familia_img.jpg){fig-alt="convention 2025"}
+![](images/general/familia_img.jpg){fig-alt="convention 2025"}
 
 ::: {.about-card-text}
 ### [SHPE]{style="color:#001F5B;"}
 
-Placeholder text about SHPE.
+The Society of Hispanic Professional Engineers (SHPE) is a national organization dedicated to empowering the Hispanic community and other underrepresented groups in STEM. Through a network of student and professional chapters, SHPE provides opportunities for leadership development, mentorship, networking, and career advancement. By promoting academic excellence and professional growth, SHPE strives to increase representation in STEM and create a lasting impact on future generations.
+
 :::
 :::
 
 ::: {.about-card}
-![](images/placeholder_index.png){fig-alt="Placeholder image"}
+![](images/general/picnic.jpg){fig-alt="Picnic"}
 
 ::: {.about-card-text}
 ### [SHPE at GW]{style="color:#D6BF91;"}
 
-Placeholder text about SHPE at GW.
+SHPE GWU, revived in 2020, is dedicated to empowering Hispanic students and other underrepresented communities through STEM awareness, professional development, and academic support. Our chapter fosters a strong Latinx familia at GW by creating opportunities for community building, career advancement, and meaningful connections within the engineering field. Through partnerships and sponsorships, we aim to expand our impact and continue supporting the next generation of diverse STEM leaders.
+
 :::
 :::
 
 ::: {.about-card}
-![](images/hhm.jpg){fig-alt="Meet La Familia"}
+![](images/general/hhm.jpg){fig-alt="Meet La Familia"}
 
 ::: {.about-card-text}
 ### [Our Mission]{style="color:#FD652F;"}
@@ -47,7 +49,7 @@ SHPE changes lives by empowering the Hispanic community to drive social and econ
 :::
 
 ::: {.about-card}
-![](images/dmvmixer.jpeg){fig-alt="DMV SHPE Mixer"}
+![](images/general/team02.jpg){fig-alt="Team02"}
 
 ::: {.about-card-text}
 ### [Our Vision]{style="color:#FD652F;"}

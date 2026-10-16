@@ -1,11 +1,10 @@
-# One block per event. Fill in each field; delete the "image" line if there is no picture.
-# date format: YYYY-MM-DD. Newest events show first.
+#one block per event
 
-- title: "Event Name"
-  date: 2026-11-05
-  location: "Location of the event"
-  description: "A sentence or two about what the event is and who it is for."
-  image: images/hhm.jpg
+- title: "Professionalism 101"
+  date: 2026-10-22
+  location: "SEH B1270, 6-8 PM"
+  description: "A professional development night focused on resumes, elevator pitches, and networking. Bring resumes!"
+  image: images/events/professionalism101.png
 
 - title: "Event Name"
   date: 2026-10-20
