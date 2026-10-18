@@ -27,7 +27,7 @@ The Society of Hispanic Professional Engineers (SHPE) is a national organization
 :::
 
 ::: {.about-card}
-![](images/general/picnic02.jpg){fig-alt="Picnic"}
+![](images/general/picnic02.JPG){fig-alt="Picnic"}
 
 ::: {.about-card-text}
 ### [SHPE at GW]{style="color:#D6BF91;"}
