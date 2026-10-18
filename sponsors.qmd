@@ -5,9 +5,10 @@ pagetitle: "Sponsors"
 ::: {.hero .hero-half .column-screen}
 
 ![](images/placeholder_index.png){.hero-bg fig-alt="Placeholder image"}
-<!-- TODO: replace placeholder subtitle -->
+
+
 [Partner With Us]{.hero-title}
-[Placeholder text about partnering with SHPE GW.]{.hero-subtitle}
+[Placeholder text.]{.hero-subtitle}
 :::
 
 ::: {.after-hero .column-screen}

@@ -30,7 +30,7 @@ Prefer to reach us directly? Send us a message at our email and we'll get back t
 ```{=html}
 <div class="contact-cluster" aria-hidden="true">
   <img class="contact-photo contact-photo-1" src="images/general/sgbm.jpg" alt="">
-  <img class="contact-photo contact-photo-2" src="images/general/team02.jpg" alt="">
+  <img class="contact-photo contact-photo-2" src="images/general/meetlafam.jpg" alt="">
   <img class="contact-photo contact-photo-3" src="images/general/sipnpaint.jpg" alt="">
   <img class="contact-photo contact-photo-4" src="images/general/bridge.jpg" alt="">
 </div>

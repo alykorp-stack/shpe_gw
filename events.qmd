@@ -20,6 +20,7 @@ page-layout: full
 ::: {#events}
 :::
 
+
 ```{=html}
 <script>
 // Click an event picture to see it full size; click anywhere or press Esc to close.
