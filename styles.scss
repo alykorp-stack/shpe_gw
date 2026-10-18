@@ -78,7 +78,7 @@ $navbar-fg: #000000;
   margin: 0 auto;
   padding: 0 1rem;
   font-weight: 700;
-  line-height: 1.6; // tall enough that each line's highlight box clears the next
+  line-height: 1.4; // matches highlight box height (~1.2em text + 0.2em padding) so lines touch without overlapping
   font-size: clamp(2rem, 5vw, 5rem);
   text-align: center;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
