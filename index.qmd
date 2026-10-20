@@ -4,7 +4,7 @@ pagetitle: "SHPE GW"
 
 ::: {.hero .column-screen}
 
-![](images/index_background.png){.hero-bg fig-alt="SHPE GW members"}
+![](images/index_background2.png){.hero-bg fig-alt="SHPE GW members"}
 [[Welcome to the [Society of Hispanic Professional Engineers]{style="color:#72A9BE;"} at the [George Washington University]{style="color:#D6BF91;"}]{.hero-highlight}]{.hero-title}
 :::
 
