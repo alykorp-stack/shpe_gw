@@ -28,4 +28,4 @@ format:
   html:
     theme: [cosmo, styles.scss]
     toc: false
-    anchor-sections: false # no link icons next to headings
+    anchor-sections: false 
