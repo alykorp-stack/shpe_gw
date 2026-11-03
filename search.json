@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "sponsors.html",
-    "href": "sponsors.html",
-    "title": "SHPE GW",
-    "section": "",
-    "text": "Partner With Us Placeholder text."
-  },
-  {
-    "objectID": "sponsors.html#our-sponsors",
-    "href": "sponsors.html#our-sponsors",
-    "title": "SHPE GW",
-    "section": "Our Sponsors",
-    "text": "Our Sponsors"
-  },
-  {
-    "objectID": "sponsors.html#become-a-sponsor",
-    "href": "sponsors.html#become-a-sponsor",
-    "title": "SHPE GW",
-    "section": "Become a Sponsor",
-    "text": "Become a Sponsor"
-  },
-  {
     "objectID": "join.html",
     "href": "join.html",
     "title": "SHPE GW",
@@ -47,5 +26,26 @@
     "title": "SHPE GW",
     "section": "",
     "text": "Contact us\nQuestions, comments, suggestions: we’re here for all of it.\n\n\n\n\n\n\nSuggestion Box\nQuestions, comments, suggestions, or concerns? Head to our suggestion box and we’ll make sure all of your questions get answered.\nOpen the Suggestion Box\n\n\nEmail Us\nPrefer to reach us directly? Send us a message at our email and we’ll get back to you as soon as we can.\nshpe@email.gwu.edu"
+  },
+  {
+    "objectID": "sponsors.html",
+    "href": "sponsors.html",
+    "title": "SHPE GW",
+    "section": "",
+    "text": "Partner With Us Placeholder text."
+  },
+  {
+    "objectID": "sponsors.html#our-sponsors",
+    "href": "sponsors.html#our-sponsors",
+    "title": "SHPE GW",
+    "section": "Our Sponsors",
+    "text": "Our Sponsors"
+  },
+  {
+    "objectID": "sponsors.html#become-a-sponsor",
+    "href": "sponsors.html#become-a-sponsor",
+    "title": "SHPE GW",
+    "section": "Become a Sponsor",
+    "text": "Become a Sponsor"
   }
 ]
